@@ -3,13 +3,11 @@ def nyc_pigeon_organizer(data)
   data.each_with_object({}) do |(key, value), list|
     value.each do |inner_v, names|
       names.each do |name|
-         new[name] = {}
-         new[name][key] = []
-         new[name][key] << inner_v.to_s
+         list[name] = {}
+         list[name][key] = []
+         list[name][key] << inner_v.to_s
          
       end
     end
   end
-  
-  new
 end
